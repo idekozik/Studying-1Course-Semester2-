@@ -34,6 +34,18 @@ class IJK{
         	cout<<endl;
 	}
 	
+	IJK(IJK* one){
+		i=one->i;
+		j=one->j;
+		k=one->k;
+			
+		static int objectsC;
+        	objectsC++;
+        	cout<<"Копированный объект радиус-вектор: "<<objectsC<<" был создан"<<endl;
+        	cout<<"Его адрес: "<<this<<endl;
+        	this->coutIJK();
+	}
+	
         ~IJK(){
         	cout<<"Удаление объекта . . ."<<endl;
 	}
@@ -96,9 +108,10 @@ int main()
 	setlocale(LC_ALL, "rus");
 	
     	IJK obj1 (5,6,11),obj2(13,12,11), obj3;
+	IJK obj4(&obj1);
    	Vector vobj1(&obj1, &obj2);
    	
-   	editIJK(&obj3);
+   	//editIJK(&obj3);
     	return 0;
 }
 
