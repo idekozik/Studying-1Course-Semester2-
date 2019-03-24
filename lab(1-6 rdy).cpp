@@ -7,46 +7,47 @@ class IJK{
         double i,j,k;
     public:
     	IJK(){
-            i=0;
-            j=0;
-            k=0;
+            	i=0;
+            	j=0;
+            	k=0;
            	
-			static int objects0;
+		static int objects0;
         	objects0++;
-        	cout<<"Îáúåêò íóëåâîé ðàäèóñ-âåêòîð "<<objects0<<" áûë ñîçäàí"<<endl;
-        	cout<<"Åãî àäðåñ: "<<this<<endl;
+        	cout<<"ÐžÐ±ÑŠÐµÐºÑ‚ Ð½ÑƒÐ»ÐµÐ²Ð¾Ð¹ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€"<<objects0<<" Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½"<<endl;
+        	cout<<"Ð•Ð³Ð¾ Ð°Ð´Ñ€ÐµÑ: "<<this<<endl;
         	this->coutIJK();
         	
         	cout<<endl;
-		}
+	}
 		
         IJK(double I, double J, double K){
-            i=I;
-            j=J;
-            k=K;
+            	i=I;
+            	j=J;
+            	k=K;
            	
-			static int objects;
+		static int objects;
         	objects++;
-        	cout<<"Îáúåêò ðàäèóñ-âåêòîð: "<<objects<<" áûë ñîçäàí"<<endl;
-        	cout<<"Åãî àäðåñ: "<<this<<endl;
+        	cout<<"ÐžÐ±ÑŠÐµÐºÑ‚ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€: "<<objects<<" Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½"<<endl;
+        	cout<<"Ð•Ð³Ð¾ Ð°Ð´Ñ€ÐµÑ: "<<this<<endl;
         	this->coutIJK();
         	
         	cout<<endl;
-		}
+	}
+	
         ~IJK(){
-        	cout<<"Óäàëåíèå îáúåêòà . . ."<<endl;
-		}
+        	cout<<"Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¾Ð±ÑŠÐµÐºÑ‚Ð° . . ."<<endl;
+	}
         
         friend class Vector;
         friend void editIJK(IJK* one);
 
         void editIJK(){
-            cout<<"Ðåäàêòèðîâàíèå i,j,k: "<<endl;
+            cout<<"Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ i,j,k: "<<endl;
             cin>>i,j,k;
         }
         
         void coutIJK(){
-            cout<<"Êîîðäèíàòû ðàäèóñ-âåêòîðà: ";
+            cout<<"ÐšÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€Ð°: ";
             cout<<"i= "<<i<<"; j= "<<j<<"; k= "<<k<<endl;
         }
 };
@@ -61,15 +62,17 @@ class Vector{
 			k = two->k - one->k;
 			
 			static int vectors;
-        	vectors++;
-        	cout<<"Îáúåêò âåêòîð "<<vectors<<" áûë ñîçäàí"<<endl;
+        		vectors++;
+        		cout<<"ÐžÐ±ÑŠÐµÐºÑ‚ Ð²ÐµÐºÑ‚Ð¾Ñ€ "<<vectors<<" Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½"<<endl;
 			this->coutVector();
 		}
+	
 		~Vector(){
-			cout<<"Óäàëåíèå îáúåêòà . . ."<<endl;
+			cout<<Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¾Ð±ÑŠÐµÐºÑ‚Ð° . . ."<<endl;
 		}
+	
 		coutVector(){
-			cout<<"Êîîðäèíàòû âåêòîðà â ïð-âå: ";
+			cout<<"ÐšÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° Ð² Ð¿Ñ€-Ð²Ðµ: ";
 			cout<<"i= "<<i<<"; j= "<<j<<"; k= "<<k<<endl;
 			cout<<endl;
 		}
@@ -78,7 +81,7 @@ class Vector{
 
 void editIJK(IJK* one){
 	int i,j,k;
-	cout<<"Èçìåíåíèå çíà÷åíèÿ ðàäèóñ-âåêòîðà (i=, j=, k=): ";
+	cout<<"Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° (i=, j=, k=):";
 	cin>>i>>j>>k;
 	cout<<endl;
 	one->i=i; 
@@ -92,10 +95,10 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	
-    IJK obj1 (5,6,11),obj2(13,12,11), obj3;
+    	IJK obj1 (5,6,11),obj2(13,12,11), obj3;
    	Vector vobj1(&obj1, &obj2);
    	
    	editIJK(&obj3);
-    return 0;
+    	return 0;
 }
 
