@@ -80,7 +80,7 @@ class Vector{
 		}
 	
 		~Vector(){
-			cout<<Удаление объекта . . ."<<endl;
+			cout<<"Удаление объекта . . ."<<endl;
 		}
 	
 		coutVector(){
