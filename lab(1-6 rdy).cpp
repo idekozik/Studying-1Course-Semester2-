@@ -54,11 +54,6 @@ class IJK{
         
         friend class Vector;
         friend void editIJK(IJK* one);
-
-        void editIJK(){
-            cout<<"Редактирование i,j,k: "<<endl;
-            cin>>i,j,k;
-        }
         
         void coutIJK(){
             cout<<"Координаты радиус-вектора: ";
