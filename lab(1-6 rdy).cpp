@@ -44,6 +44,8 @@ class IJK{
         	cout<<"Копированный объект радиус-вектор: "<<objectsC<<" был создан"<<endl;
         	cout<<"Его адрес: "<<this<<endl;
         	this->coutIJK();
+		
+		cout<<endl;
 	}
 	
         ~IJK(){
