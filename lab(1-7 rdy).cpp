@@ -148,6 +148,8 @@ int main()
    	
    	if(vobj3==vobj4) cout<<"True"<<endl;
    	else cout<<"False"<<endl;
+	
+	system("pause");
     	return 0;
 }
 
