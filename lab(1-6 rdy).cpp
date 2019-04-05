@@ -65,6 +65,11 @@ class Vector{
 	private:
 		double i,j,k;
 	public:
+		friend Vector operator + (Vector &one, Vector &two);
+		friend Vector operator - (Vector &one, Vector &two);
+		friend bool operator == (Vector &one, Vector &two);
+		friend double operator ++ (Vector &one);
+	
 		Vector(IJK* one, IJK* two){
 			i = two->i - one->i;
 			j = two->j - one->j;
@@ -73,6 +78,17 @@ class Vector{
 			static int vectors;
         		vectors++;
         		cout<<"Объект вектор "<<vectors<<" был создан"<<endl;
+			this->coutVector();
+		}
+	
+		Vector(double I, double J, double K){	
+			i=I;
+          		j=J;
+           		k=K;
+            
+			static int vectors;
+        		vectors++;
+        		cout<<"Îáúåêò âåêòîð ïî êîîðäèíàòàì "<<vectors<<" áûë ñîçäàí"<<endl;
 			this->coutVector();
 		}
 	
@@ -87,6 +103,25 @@ class Vector{
 		}
 
 };
+
+Vector operator + (Vector &one, Vector &two){
+	return (Vector(one.i+two.i,one.j+two.j,one.k+two.k));
+}
+
+Vector operator - (Vector &one, Vector &two){
+	return (Vector(one.i-two.i,one.j-two.j,one.k-two.k));
+}
+
+bool operator == (Vector &one, Vector &two){
+	if(one.i == two.i && one.j == two.j && one.k == two.k)
+		return true;
+	return false;
+}
+double operator ++ (Vector &one){
+	one.i++;
+	one.j++;
+	one.k++;
+}
 
 void editIJK(IJK* one){
 	int i,j,k;
@@ -104,11 +139,15 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	
-    	IJK obj1 (5,6,11),obj2(13,12,11), obj3;
-	IJK obj4(&obj1);
+    	IJK obj1 (5,6,11),obj2(13,12,11), obj3, obj4(&obj1);
    	Vector vobj1(&obj1, &obj2);
-   	
    	//editIJK(&obj3);
+   	Vector vobj2(&obj4, &obj3);
+   	Vector vobj3 = vobj1 + vobj2;
+   	Vector vobj4 = vobj3 - vobj1;
+   	
+   	if(vobj3==vobj4) cout<<"True"<<endl;
+   	else cout<<"False"<<endl;
     	return 0;
 }
 
