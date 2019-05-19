@@ -40,7 +40,7 @@ class IJK : protected Basis {
 	public:
 		friend void textBox();
 		void getSubSpaceInfo(IJK* one){
-			cout<<"Ïîäïðîñòðàíñòâî îáúåêòà: "<<one<<endl;
+			cout<<"ÐŸÐ¾Ð´Ð¿Ñ€Ð¾ÑÑ‚Ñ€Ð°Ð½ÑÑ‚Ð²Ð¾ Ð¾Ð±ÑŠÐµÐºÑ‚Ð°: "<<one<<endl;
 			for(int i=0; i<3; i++){
 				mSubSpace[i].coutSubSpace();
 			}
@@ -53,8 +53,8 @@ class IJK : protected Basis {
 	
 			static int objects0;
 			objects0++;
-			cout << "Îáúåêò íóëåâîé ðàäèóñ-âåêòîð" << objects0 << " áûë ñîçäàí" << endl;
-			cout << "Åãî àäðåñ: " << this << endl;
+			cout << "ÐžÐ±ÑŠÐµÐºÑ‚ Ð½ÑƒÐ»ÐµÐ²Ð¾Ð¹ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€" << objects0 << " Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½" << endl;
+			cout << "Ð•Ð³Ð¾ Ð°Ð´Ñ€ÐµÑ: " << this << endl;
 			this->print();
 	
 			cout << endl;
@@ -67,8 +67,8 @@ class IJK : protected Basis {
 	
 			static int objects;
 			objects++;
-			cout << "Îáúåêò ðàäèóñ-âåêòîð: " << objects << " áûë ñîçäàí" << endl;
-			cout << "Åãî àäðåñ: " << this << endl;
+			cout << "ÐžÐ±ÑŠÐµÐºÑ‚ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€: " << objects << " Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½" << endl;
+			cout << "Ð•Ð³Ð¾ Ð°Ð´Ñ€ÐµÑ: " << this << endl;
 			this->print();
 	
 			cout << endl;
@@ -81,22 +81,22 @@ class IJK : protected Basis {
 	
 			static int objectsC;
 			objectsC++;
-			cout << "Êîïèðîâàííûé îáúåêò ðàäèóñ-âåêòîð: " << objectsC << " áûë ñîçäàí" << endl;
-			cout << "Åãî àäðåñ: " << this << endl;
+			cout << "ÐšÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ð¹ Ð¾Ð±ÑŠÐµÐºÑ‚ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€: " << objectsC << " Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½" << endl;
+			cout << "Ð•Ð³Ð¾ Ð°Ð´Ñ€ÐµÑ: " << this << endl;
 			this->print();
 	
 			cout << endl;
 		}
 	
 		~IJK() {
-			cout << "Óäàëåíèå îáúåêòà . . ." << endl;
+			cout << "Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¾Ð±ÑŠÐµÐºÑ‚Ð° . . ." << endl;
 		}
 	
 		friend class Vector;
 		friend void editIJK(IJK* one);
 	
 		void print() {
-			cout << "Êîîðäèíàòû ðàäèóñ-âåêòîðà: ";
+			cout << "ÐšÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€Ð°: ";
 			cout << "i= " << i << "; j= " << j << "; k= " << k << endl;
 		}
 };
@@ -116,7 +116,7 @@ public:
 
 		static int vectors;
 		vectors++;
-		cout << "Îáúåêò âåêòîð " << vectors << " áûë ñîçäàí" << endl;
+		cout << "ÐžÐ±ÑŠÐµÐºÑ‚ Ð²ÐµÐºÑ‚Ð¾Ñ€ " << vectors << " Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½" << endl;
 		this->print();
 	}
 
@@ -127,16 +127,16 @@ public:
 
 		static int vectors;
 		vectors++;
-		cout << "Îáúåêò âåêòîð ïî êîîðäèíàòàì " << vectors << " áûë ñîçäàí" << endl;
+		cout << "ÐžÐ±ÑŠÐµÐºÑ‚ Ð²ÐµÐºÑ‚Ð¾Ñ€ Ð¿Ð¾ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð°Ð¼ " << vectors << " Ð±Ñ‹Ð» ÑÐ¾Ð·Ð´Ð°Ð½" << endl;
 		this->print();
 	}
 
 	~Vector() {
-		cout << "Óäàëåíèå îáúåêòà . . ." << endl;
+		cout << "Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¾Ð±ÑŠÐµÐºÑ‚Ð° . . ." << endl;
 	}
 
 	void print() {
-		cout << "Êîîðäèíàòû âåêòîðà â ïð-âå: ";
+		cout << "ÐšÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° Ð² Ð¿Ñ€-Ð²Ðµ: ";
 		cout << "i= " << i << "; j= " << j << "; k= " << k << endl;
 		cout << endl;
 	}
@@ -164,7 +164,7 @@ double operator ++ (Vector &one) {
 
 void editIJK(IJK* one) {
 	int i, j, k;
-	cout << "Èçìåíåíèå çíà÷åíèÿ ðàäèóñ-âåêòîðà (i=, j=, k=):";
+	cout << "Ð˜Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ñ€Ð°Ð´Ð¸ÑƒÑ-Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° (i=, j=, k=):";
 	cin >> i >> j >> k;
 	cout << endl;
 	one->i = i;
